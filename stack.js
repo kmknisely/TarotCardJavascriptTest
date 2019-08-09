@@ -1,5 +1,7 @@
 var round = 0;
 
+var answerTime = 0;
+
 var cards = document.getElementsByClassName("card");
 
 var card1 = document.getElementById("one");
@@ -154,6 +156,19 @@ var numberCard = [
   "number": 10},
 ];
 
+var fortunes = [
+  "A beautiful, smart, and loving person will be coming into your life.",
+  "From now on your kindness will lead you to success.",
+  "In the end all things will be known.",
+  "A lifetime friend shall soon be made",
+  "Physical activity will dramatically improve your outlook today.",
+  "Savor your freedom – it is precious.",
+  "The smart thing to do is to begin trusting your intuitions.",
+  "Your moods signal a period of change.",
+  "Many will travel to hear you speak.",
+  "Never fear! The end of something marks the start of something new.",
+];
+
 function open (){
   faceCard.sort(function(a, b){return 0.5 - Math.random()});
 
@@ -194,6 +209,7 @@ function selectCard(){
         setTimeout(toggle, i*seconds);
       };
     } else {
+        answerTime = faceCard[0].name.length
         for (i = 0; i < faceCard[0].name.length * 2; i++){
           setTimeout(toggle, i*seconds);
         };
@@ -206,6 +222,7 @@ function selectCard(){
         setTimeout(toggle, i*seconds);
       };
     } else {
+        answerTime = faceCard[1].name.length
         for (i = 0; i < faceCard[1].name.length * 2; i++){
           setTimeout(toggle, i*seconds);
         };
@@ -218,6 +235,7 @@ function selectCard(){
         setTimeout(toggle, i*seconds);
       };
     } else {
+        answerTime = faceCard[2].name.length
         for (i = 0; i < faceCard[2].name.length * 2; i++){
           setTimeout(toggle, i*seconds);
         };    }
@@ -229,6 +247,7 @@ function selectCard(){
         setTimeout(toggle, i*seconds);
     };
   } else {
+      answerTime = faceCard[3].name.length
       for (i = 0; i < faceCard[3].name.length * 2; i++){
         setTimeout(toggle, i*seconds);
       };    }
@@ -237,10 +256,14 @@ function selectCard(){
 
 };
 
+function answer (){
+  if(round === 3){
+    fortunes.sort(function(a, b){return 0.5 - Math.random()});
 
-window.onload = function(){
-  open();
+    document.getElementById("fortune-text").innerHTML = fortunes[0];
+  }
 };
+
 
 /* Stacking card code*/
 
@@ -249,6 +272,9 @@ $('.stack').click(function() {
 
     round++;
     setTimeout(cardChange, 2000);
+    setTimeout(answer, answerTime * 1000);
+    console.log(answerTime);
+
 
   $(".card").each(function(e) {
 
@@ -265,8 +291,6 @@ $('.stack').click(function() {
 
 $('.spread').click(function() {
 
-  console.log(round);
-
   $(".card").each(function(e) {
 
     setTimeout(function() {
@@ -279,4 +303,7 @@ $('.spread').click(function() {
 });
 
 
+window.onload = function(){
+  open();
+};
 selectCard();

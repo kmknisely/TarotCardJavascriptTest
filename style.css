@@ -87,14 +87,31 @@ img{
   position: absolute;
   overflow: hidden;
   z-index: -10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #stars {
   opacity: 0;
+  transition: .5s ease;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 .on{
-opacity: 1 !important;
+opacity: .8 !important;
+transition: .5s ease;
+top:0;
+left:0;
+}
+
+p{
+  color: white;
+  width: 90%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 @media(max-width: 1200px){

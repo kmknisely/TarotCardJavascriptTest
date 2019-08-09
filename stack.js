@@ -1,10 +1,13 @@
 var round = 0;
+
 var cards = document.getElementsByClassName("card");
+
 var card1 = document.getElementById("one");
 var card2 = document.getElementById("two");
 var card3 = document.getElementById("three");
 var card4 = document.getElementById("four");
 
+var seconds = 500;
 
 var faceCard = [
   //0
@@ -178,38 +181,57 @@ function cardChange (){
   };
 };
 
+function toggle() {
+  document.getElementById("stars").classList.toggle("on");
+};
+
+
 function selectCard(){
 
   card1.addEventListener("click",function(){
     if(round===1){
-      console.log(numberCard[0].number);
+      for (i = 0; i < numberCard[0].number * 2; i++){
+        setTimeout(toggle, i*seconds);
+      };
     } else {
-      console.log(faceCard[0].name.length);
+        for (i = 0; i < faceCard[0].name.length * 2; i++){
+          setTimeout(toggle, i*seconds);
+        };
     }
   });
 
   card2.addEventListener("click",function(){
     if(round===1){
-      console.log(numberCard[1].number);
+      for (i = 0; i < numberCard[1].number * 2; i++){
+        setTimeout(toggle, i*seconds);
+      };
     } else {
-      console.log(faceCard[1].name.length);
+        for (i = 0; i < faceCard[1].name.length * 2; i++){
+          setTimeout(toggle, i*seconds);
+        };
     }
   });
 
   card3.addEventListener("click",function(){
     if(round===1){
-      console.log(numberCard[2].number);
+      for (i = 0; i < numberCard[2].number * 2; i++){
+        setTimeout(toggle, i*seconds);
+      };
     } else {
-      console.log(faceCard[2].name.length);
-    }
+        for (i = 0; i < faceCard[2].name.length * 2; i++){
+          setTimeout(toggle, i*seconds);
+        };    }
   });
 
   card4.addEventListener("click",function(){
     if(round===1){
-      console.log(numberCard[3].number);
-    } else {
-      console.log(faceCard[3].name.length);
-    }
+      for (i = 0; i < numberCard[3].number * 2; i++){
+        setTimeout(toggle, i*seconds);
+    };
+  } else {
+      for (i = 0; i < faceCard[3].name.length * 2; i++){
+        setTimeout(toggle, i*seconds);
+      };    }
   });
 
 

@@ -83,18 +83,18 @@ img{
   height: 40%;
   right: 20%;
   bottom: 5%;
-  background: purple;
+  background-color: purple;
   position: absolute;
   overflow: hidden;
-
+  z-index: -10;
 }
 
-.stars-off {
+#stars {
   opacity: 0;
 }
 
-.stars-on {
-  opacity: 1;
+.on{
+opacity: 1 !important;
 }
 
 @media(max-width: 1200px){

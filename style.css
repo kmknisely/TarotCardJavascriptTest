@@ -19,9 +19,9 @@
 }
 
 img{
-width: 110%;
-height: 110%;
-object-fit: cover;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
 }
 
 .list {

@@ -1,3 +1,5 @@
+/* Stacking card code*/
+
 $('.stack').click(function() {
 
   $(".card").each(function(e) {
@@ -10,6 +12,9 @@ $('.stack').click(function() {
 
 });
 
+
+/* Spreading card code */
+
 $('.spread').click(function() {
 
   $(".card").each(function(e) {
@@ -19,5 +24,6 @@ $('.spread').click(function() {
     }, e * 150)
 
   });
+
 
 });

@@ -1,16 +1,16 @@
 /* Card CSS taken from Code Pen */
 
 .grid {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 #mainCard{
-  width: 200px;
-  height: 400px;
+  width: 20%;
+  height: 40%;
   position: absolute;
-  right: 41%;
-  bottom: 4%;
+  right: 80%;
+  bottom: 5%;
   z-index: 10000;
   overflow: hidden;
   display: flex;
@@ -25,7 +25,8 @@ img{
 }
 
 .list {
-  height: 80vh;
+  height: 100vh;
+  width: 100%;
   position: relative;
   list-style-type: none;
   padding-left: 0;
@@ -33,19 +34,12 @@ img{
 
 .card {
   transition: all 1s cubic-bezier(0.68, 0, 0.265, 0);
-  perspective: 1000;
-  -ms-transform: perspective(1000px);
-  -moz-transform: perspective(1000px);
-  -ms-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   float: left;
-  width: 200px;
-  height: 400px;
-  background-color: #eee;
+  width: 20%;
+  height: 40%;
   position: absolute;
-  right: 40%;
-  bottom: -20%;
-  margin: 30px 0 15px 15px;
+  right: 80%;
+  bottom: 8%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -56,22 +50,37 @@ img{
   margin-right: 0;
 }
 .card.ani0 {
-  right: 948px;
-  bottom: 326px;
+  right: 80%;
+  bottom: 60%;
 }
 .card.ani1 {
-  right: 711px;
-  bottom: 326px;
+  right: 60%;
+  bottom: 60%;
 }
 .card.ani2 {
-  right: 474px;
-  bottom: 326px;
+  right: 40%;
+  bottom: 60%;
 }
 .card.ani3 {
-  right: 237px;
-  bottom: 326px;
+  right: 20%;
+  bottom: 60%;
 }
-.card.ani4 {
-  right: 0;
-  bottom: 326px;
+
+@media(max-width: 1200px){
+
+ img{
+   width: 105%;
+   height: 105%;
+ }
+
+  #mainCard{
+    width: 15%;
+    height: 40%;
+  }
+  .card {
+    width: 15%;
+    height: 39%;
+  }
+
+
 }

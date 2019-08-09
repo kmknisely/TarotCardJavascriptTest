@@ -32,7 +32,7 @@ img{
 }
 
 .card {
-  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 1s cubic-bezier(0.68, 0, 0.265, 0);
   perspective: 1000;
   -ms-transform: perspective(1000px);
   -moz-transform: perspective(1000px);

@@ -151,7 +151,7 @@ var numberCard = [
   "number": 10},
 ];
 
-function crazy (){
+function open (){
   faceCard.sort(function(a, b){return 0.5 - Math.random()});
 
   card1.src = faceCard[0].image;
@@ -159,10 +159,6 @@ function crazy (){
   card3.src = faceCard[2].image;
   card4.src = faceCard[3].image;
 }
-
-window.onload = function(){
-  crazy();
-};
 
 function cardChange (){
   if( round === 1){
@@ -182,6 +178,47 @@ function cardChange (){
   };
 };
 
+function selectCard(){
+
+  card1.addEventListener("click",function(){
+    if(round===1){
+      console.log(numberCard[0].number);
+    } else {
+      console.log(faceCard[0].name.length);
+    }
+  });
+
+  card2.addEventListener("click",function(){
+    if(round===1){
+      console.log(numberCard[1].number);
+    } else {
+      console.log(faceCard[1].name.length);
+    }
+  });
+
+  card3.addEventListener("click",function(){
+    if(round===1){
+      console.log(numberCard[2].number);
+    } else {
+      console.log(faceCard[2].name.length);
+    }
+  });
+
+  card4.addEventListener("click",function(){
+    if(round===1){
+      console.log(numberCard[3].number);
+    } else {
+      console.log(faceCard[3].name.length);
+    }
+  });
+
+
+};
+
+
+window.onload = function(){
+  open();
+};
 
 /* Stacking card code*/
 
@@ -189,6 +226,7 @@ function cardChange (){
 $('.stack').click(function() {
 
     round++;
+    setTimeout(cardChange, 2000);
 
   $(".card").each(function(e) {
 
@@ -206,7 +244,6 @@ $('.stack').click(function() {
 $('.spread').click(function() {
 
   console.log(round);
-  cardChange();
 
   $(".card").each(function(e) {
 
@@ -218,3 +255,6 @@ $('.spread').click(function() {
 
 
 });
+
+
+selectCard();

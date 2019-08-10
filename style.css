@@ -22,6 +22,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 3%;
+  box-shadow: 5px 5px rgba(0,0,0,.5);
 }
 
 #mainimg{
@@ -54,6 +56,9 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 3%;
+  box-shadow: 5px 5px rgba(0,0,0,.5);
+
 }
 
 .card:nth-child(5n) {
@@ -83,13 +88,14 @@ img{
   height: 40%;
   right: 20%;
   bottom: 5%;
-  background-color: purple;
+  background-color: rgba(	18, 13, 26, 0.8);
   position: absolute;
   overflow: hidden;
   z-index: -10;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5%;
 }
 
 #stars {
@@ -101,7 +107,7 @@ img{
 }
 
 .on{
-opacity: .8 !important;
+opacity: .5 !important;
 transition: .5s ease;
 top:0;
 left:0;
@@ -112,6 +118,8 @@ p{
   width: 90%;
   text-align: center;
   font-size: 2rem;
+  font-family: 'Beth Ellen', cursive;
+  line-height: 3rem;
 }
 
 @media(max-width: 1200px){

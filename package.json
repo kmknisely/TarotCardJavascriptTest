@@ -1,0 +1,24 @@
+{
+  "name": "p3-knisely-kenney",
+  "version": "1.0.0",
+  "description": "The majority of my project was based on around this codepen: https://codepen.io/tatsin/pen/VQMmPr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmknisely/p3-knisely-kenney.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmknisely/p3-knisely-kenney/issues"
+  },
+  "homepage": "https://github.com/kmknisely/p3-knisely-kenney#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}

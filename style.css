@@ -31,8 +31,8 @@ body{
 }
 
 img{
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -118,7 +118,6 @@ left:0;
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   left: 5%;
 }
 
@@ -149,19 +148,17 @@ p{
 @media(max-width: 1200px){
 
  img{
-   width: 105%;
-   height: 105%;
+   width: 100%;
+   height: 100%;
  }
 
   #mainCard{
     width: 15%;
-    height: 40%;
     right: 80%;
     bottom: 5%;
   }
   .card {
     width: 15%;
-    height: 39%;
     right: 80%;
     bottom: 8%;
   }
@@ -181,6 +178,14 @@ p{
   .card.ani3 {
     right: 20%;
     bottom: 60%;
+  }
+
+  #instructions h1{
+    font-size: 1.5rem;
+  }
+
+  #instructions p{
+    font-size: .8rem;
   }
 
 

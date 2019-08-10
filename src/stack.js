@@ -1,3 +1,4 @@
+//Global Variables
 let round = 0;
 
 let answerTime = 0;
@@ -169,6 +170,9 @@ const fortunes = [
   "Never fear! The end of something marks the start of something new.",
 ];
 
+//Functions
+
+//Put images in the cards when the window is opened
 function open (){
   faceCard.sort(function(a, b){return 0.5 - Math.random()});
 
@@ -178,6 +182,7 @@ function open (){
   card4.src = faceCard[3].image;
 }
 
+//Change the image on the card depending on the round
 function cardChange (){
   if( round === 1){
     numberCard.sort(function(a, b){return 0.5 - Math.random()});
@@ -196,8 +201,10 @@ function cardChange (){
   };
 };
 
+//Toggle class to make stars appear and disappear
 const toggle = () => document.getElementById("stars").classList.toggle("on");
 
+//run the toggle function when a card is clicked. Run the toggle based on the length of the name of the card or based on the card number
 function selectCard(){
 
   card1.addEventListener("click",function(){
@@ -253,6 +260,7 @@ function selectCard(){
 
 };
 
+//Display a random fortune
 function answer (){
   if(round === 3){
     fortunes.sort(function(a, b){return 0.5 - Math.random()});
@@ -261,9 +269,9 @@ function answer (){
   }
 };
 
-function hideText (){
-  document.getElementById("instructions").style.display = "none";
-}
+//Hide the instructions
+const hideText = () => document.getElementById("instructions").style.display = "none";
+
 
 
 /* Stacking card code*/
@@ -274,7 +282,6 @@ $('.stack').click(function() {
     round++;
     setTimeout(cardChange, 2000);
     setTimeout(answer, answerTime * 1000);
-    console.log(answerTime);
 
 
   $(".card").each(function(e) {

@@ -113,6 +113,30 @@ top:0;
 left:0;
 }
 
+#instructions {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 5%;
+}
+
+#instructions h1{
+  font-family: 'Beth Ellen', cursive;
+  font-size: 2.5rem;
+  color: white;
+  line-height: 2rem;
+}
+
+#instructions p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.8rem;
+  text-align: left;
+}
+
 p{
   color: white;
   width: 90%;

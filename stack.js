@@ -264,6 +264,10 @@ function answer (){
   }
 };
 
+function hideText (){
+  document.getElementById("instructions").style.display = "none";
+}
+
 
 /* Stacking card code*/
 
@@ -290,6 +294,8 @@ $('.stack').click(function() {
 /* Spreading card code */
 
 $('.spread').click(function() {
+
+  hideText();
 
   $(".card").each(function(e) {
 
